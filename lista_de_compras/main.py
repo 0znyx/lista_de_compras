@@ -1,8 +1,5 @@
-# Mini sistema de Lista de Compras
-
-# Lista que armazenará os itens (cada item é um dicionário)
+# Lista que armazenará os itens
 lista_compras = []
-
 
 # Função para mostrar o menu
 def mostrar_menu():
@@ -29,7 +26,6 @@ def adicionar_item():
     lista_compras.append(item)
     print(f"Item '{nome}' adicionado com sucesso!")
 
-
 # Função para remover item
 def remover_item():
     nome = input("Digite o nome do item que deseja remover: ").strip()
@@ -43,7 +39,6 @@ def remover_item():
     if not encontrado:
         print(f"Item '{nome}' não encontrado na lista.")
 
-
 # Função para listar todos os itens
 def listar_itens():
     if not lista_compras:
@@ -52,7 +47,6 @@ def listar_itens():
         print("\n=== LISTA DE COMPRAS ===")
         for i, item in enumerate(lista_compras, start=1):
             print(f"{i}. {item['nome']} - Quantidade: {item['quantidade']} - Preço: {item['preco']}")
-
 
 # Função para buscar item
 def buscar_item():
@@ -65,7 +59,6 @@ def buscar_item():
             print(f"{item['nome']} - Quantidade: {item['quantidade']} - Preço: {item['preco']}")
     else:
         print("Nenhum item encontrado com esse nome.")
-
 
 # Loop principal
 while True:
